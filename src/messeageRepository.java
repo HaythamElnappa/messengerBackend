@@ -1,34 +1,40 @@
 import java.util.ArrayList;
 
-public class messeageRepository {
+public class MesseageRepository {
 	
 	//the composition of message
 
-	private ArrayList<message> messages = new ArrayList<>();
+	private ArrayList<Message> messages = new ArrayList<>();
 	
 	// the function
 	
-	public ArrayList getAllmessages() {
+	public ArrayList getAllMessages() {
 		return messages;
 	}
 	
-	public void addmessage(message message) {
+	public void addMessage(Message message) {
 		this.messages.add(message);
 	}
 	
-	public void removeMessage(message message) {
+	public boolean removeMessage(Message message) {
+		if(messages.contains(message)) {
 		this.messages.remove(message);
+		return true;
+		}
+		return false;
 	}
 	
-	public void removemessage(int id) {
+	public boolean removeMessage(int id) {
 		for(int i =0 ; i <messages.size();i++) {
 			if (messages.get(i).getId()== id) {
 				messages.remove(this.messages.get(i));
+				return true;
 			}
 		}
+		return false;
 	}
 	
-	public message getMessagebyid(int id) {
+	public Message getMessageById(int id) {
 		for(int i =0 ; i <messages.size();i++) {
 			if (messages.get(i).getId()== id) {
 				return this.messages.get(i);
