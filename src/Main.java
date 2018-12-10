@@ -18,7 +18,7 @@ public class Main {
 	
 	// method for seed
 	
-	public static void seed (UserRepository UserRepository,MesseageRepository MesseageRepository) {
+	public static void seed (UserRepository userRepository,MesseageRepository messeageRepository) {
 		
 		// users
 		User u1 = new User(10,"haytham","111");
@@ -34,17 +34,17 @@ public class Main {
 		Message m4 = new Message(40,"hi mahoud");
 		Message m5 = new Message(50,"hi islam");
 		
-		UserRepository.addUser(u1);
-		UserRepository.addUser(u2);
-		UserRepository.addUser(u3);
-		UserRepository.addUser(u4);
-		UserRepository.addUser(u5);
+		userRepository.addUser(u1);
+		userRepository.addUser(u2);
+		userRepository.addUser(u3);
+		userRepository.addUser(u4);
+		userRepository.addUser(u5);
 		
-		MesseageRepository.addMessage(m1);
-		MesseageRepository.addMessage(m2);
-		MesseageRepository.addMessage(m3);
-		MesseageRepository.addMessage(m4);
-		MesseageRepository.addMessage(m5);
+		messeageRepository.addMessage(m1);
+		messeageRepository.addMessage(m2);
+		messeageRepository.addMessage(m3);
+		messeageRepository.addMessage(m4);
+		messeageRepository.addMessage(m5);
 		
 		
 		
