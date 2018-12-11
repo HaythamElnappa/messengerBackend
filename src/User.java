@@ -5,17 +5,18 @@ public class User {
 	private String name;
 	private String password;
 	
-	// the contractor
+	// the constractor
 	
-	public User(int id , String name) {
+	public User(int id , String name, String password) {
 		this.id = id;
 		this.name = name;
+		this.password = password;
 	}
 	
 	//the public getter and setter for the variable
 
 	public int getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(int id) {
@@ -23,7 +24,7 @@ public class User {
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -31,7 +32,7 @@ public class User {
 	}
 
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 
 	public void setPassword(String password) {
